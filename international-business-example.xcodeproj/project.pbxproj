@@ -17,6 +17,8 @@
 		1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B9B26F34FB000C72B3F /* ServiceProvider.swift */; };
 		1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B9D26F34FB800C72B3F /* MockProvider.swift */; };
 		1C553BA126F3507C00C72B3F /* ServiceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA026F3507C00C72B3F /* ServiceProviderProtocol.swift */; };
+		1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA326F37CBE00C72B3F /* RatesMockService.swift */; };
+		1C553BA726F37D4400C72B3F /* RatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		1C553B9B26F34FB000C72B3F /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		1C553B9D26F34FB800C72B3F /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
 		1C553BA026F3507C00C72B3F /* ServiceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderProtocol.swift; sourceTree = "<group>"; };
+		1C553BA326F37CBE00C72B3F /* RatesMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesMockService.swift; sourceTree = "<group>"; };
+		1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		1C553B9F26F34FC400C72B3F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1C553BA526F37D3000C72B3F /* RatesService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -172,6 +177,15 @@
 				1C553B9B26F34FB000C72B3F /* ServiceProvider.swift */,
 			);
 			path = ServiceProviders;
+			sourceTree = "<group>";
+		};
+		1C553BA526F37D3000C72B3F /* RatesService */ = {
+			isa = PBXGroup;
+			children = (
+				1C553BA326F37CBE00C72B3F /* RatesMockService.swift */,
+				1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */,
+			);
+			path = RatesService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +319,12 @@
 			files = (
 				1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */,
 				1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */,
+				1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */,
 				1C553B6F26F3475200C72B3F /* ContentView.swift in Sources */,
 				1C553B9A26F34FA600C72B3F /* UseCaseProvider.swift in Sources */,
 				1C553BA126F3507C00C72B3F /* ServiceProviderProtocol.swift in Sources */,
 				1C553B6D26F3475200C72B3F /* international_business_exampleApp.swift in Sources */,
+				1C553BA726F37D4400C72B3F /* RatesServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -enable-experimental-concurrency";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -497,6 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -enable-experimental-concurrency";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -520,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-exampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/international-business-example.app/international-business-example";
 			};
@@ -542,7 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-exampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/international-business-example.app/international-business-example";
 			};
@@ -562,7 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-exampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "international-business-example";
 			};
@@ -582,7 +600,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorge3pp.international-business-exampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "international-business-example";
 			};
