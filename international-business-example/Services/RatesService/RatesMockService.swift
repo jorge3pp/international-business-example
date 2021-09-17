@@ -9,11 +9,5 @@ import Foundation
 
 class RatesMockService: RatesServiceProtocol {
     func getCurrencyRates() {
-        //let a = try await
     }
-    
-    @asyncHandler internal func makeBrakefastAsync(){
-        
-    }
-
 }
