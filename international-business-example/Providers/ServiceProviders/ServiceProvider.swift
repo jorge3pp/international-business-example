@@ -6,8 +6,14 @@
 //
 
 import Foundation
-
+import ApiManager
 
 struct ServiceProvider: ServiceProviderProtocol {
+    let ratesService: RatesServiceProtocol
     
+    init() {
+        let apiClientBasic = APIClientBasic()
+        
+        ratesService = RatesRemoteService(apiClient: apiClientBasic)
+    }
 }

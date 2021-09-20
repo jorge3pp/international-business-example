@@ -9,5 +9,9 @@ import Foundation
 
 
 struct MockProvider: ServiceProviderProtocol {
+    let ratesService: RatesServiceProtocol
     
+    init() {
+        ratesService = RatesMockService()
+    }
 }

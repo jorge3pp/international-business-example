@@ -6,8 +6,13 @@
 //
 
 import Foundation
-
+import ApiManager
 
 struct UseCaseProvider {
-    
+    let getRatesUseCase: GetRatesUseCase
+
+    init(serviceProvider: ServiceProviderProtocol) {
+        getRatesUseCase = GetRatesUseCase(
+            service: serviceProvider.ratesService, headerProtocol: ApplicationJSONHeader())
+    }
 }

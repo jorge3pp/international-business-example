@@ -5,9 +5,13 @@
 //  Created by Jorge Poveda on 16/9/21.
 //
 
-import Foundation
+import Combine
+import ApiManager
 
 class RatesMockService: RatesServiceProtocol {
-    func getCurrencyRates() {
+    func getCurrencyRates(with headerProtocol: HTTPHeaderProtocol) -> AnyPublisher<[Rate], Error> {
+        Just([MockConstants.rate])
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
     }
 }

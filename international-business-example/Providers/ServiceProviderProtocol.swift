@@ -9,4 +9,5 @@ import Foundation
 
 
 protocol ServiceProviderProtocol {
+    var ratesService: RatesServiceProtocol { get }
 }
