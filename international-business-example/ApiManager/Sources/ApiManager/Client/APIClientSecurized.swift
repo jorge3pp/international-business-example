@@ -26,7 +26,7 @@ public class APIClientSecurized: APIClientProtocol {
 
     private func getSecurizedURLRequest<T: APIRequestProtocol>(with token: String, to request: T) -> URLRequest {
         var urlRequest = request.configureURLRequest()
-        urlRequest.addValue(token, forHTTPHeaderField: RequestHeaderType.Authorization)
+        urlRequest.addValue(token, forHTTPHeaderField: RequestHeaderType.Authorization.rawValue)
         return urlRequest
     }
 }
