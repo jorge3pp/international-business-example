@@ -10,10 +10,12 @@ import ApiManager
 
 struct ServiceProvider: ServiceProviderProtocol {
     let ratesService: RatesServiceProtocol
+    let transactionsService: TransactionsServiceProtocol
     
     init() {
         let apiClientBasic = APIClientBasic()
         
         ratesService = RatesRemoteService(apiClient: apiClientBasic)
+        transactionsService = TransactionsRemoteService(apiClient: apiClientBasic)
     }
 }

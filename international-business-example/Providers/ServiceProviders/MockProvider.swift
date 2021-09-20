@@ -10,8 +10,10 @@ import Foundation
 
 struct MockProvider: ServiceProviderProtocol {
     let ratesService: RatesServiceProtocol
+    let transactionsService: TransactionsServiceProtocol
     
     init() {
         ratesService = RatesMockService()
+        transactionsService = TransactionsMockService()
     }
 }

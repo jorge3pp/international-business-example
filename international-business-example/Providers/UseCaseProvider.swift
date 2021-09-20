@@ -10,9 +10,11 @@ import ApiManager
 
 struct UseCaseProvider {
     let getRatesUseCase: GetRatesUseCase
+    let getTransactionsUseCase: GetTransactionsUseCase
 
     init(serviceProvider: ServiceProviderProtocol) {
         getRatesUseCase = GetRatesUseCase(
             service: serviceProvider.ratesService, headerProtocol: ApplicationJSONHeader())
+        getTransactionsUseCase = GetTransactionsUseCase(service: serviceProvider.transactionsService, headerProtocol: ApplicationJSONHeader())
     }
 }
