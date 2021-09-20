@@ -1,8 +1,8 @@
 //
-//  GetRatesUseCaseIntegrationTests.swift
+//  GetTransactionsUseCaseIntegrationTest.swift
 //  international-business-exampleTests
 //
-//  Created by Jorge Poveda on 18/9/21.
+//  Created by Jorge Poveda on 20/9/21.
 //
 
 import ApiManager
@@ -11,19 +11,19 @@ import Foundation
 @testable import international_business_example
 import XCTest
 
-class GetRatesUseCaseIntegrationTests: XCTestCase {
-    private var getRatesUseCase: GetRatesUseCase!
+class GetTransactionsUseCaseIntegrationTest: XCTestCase {
+    private var getTransactionsUseCase: GetTransactionsUseCase!
     private var useCaseProvider: UseCaseProvider!
 
     override func setUpWithError() throws {
         useCaseProvider = UseCaseProvider(serviceProvider: ServiceProvider())
 
-        getRatesUseCase = useCaseProvider.getRatesUseCase
+        getTransactionsUseCase = useCaseProvider.getTransactionsUseCase
     }
 
     func test_getRatesUseCase() throws {
         // Given
-        let publisher = getRatesUseCase.execute()
+        let publisher = getTransactionsUseCase.execute()
 
         // When
         let expectedResult = try awaitPublisher(publisher)
