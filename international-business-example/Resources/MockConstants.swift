@@ -9,4 +9,5 @@ import Foundation
 
 enum MockConstants {
     static let rate = Rate(from: "AUD", to: "CAD", rate: "0.86")
+    static let transaction = Transaction(sku: "T2006", amount: "10.00", currency: "USD")
 }

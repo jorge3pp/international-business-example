@@ -9,7 +9,6 @@ import Combine
 import ApiManager
 
 class RatesRemoteService: RatesServiceProtocol {
-    
     private let apiClient: APIClientProtocol
 
     init(apiClient: APIClientProtocol) {
