@@ -18,3 +18,11 @@ struct Transaction: Decodable {
         self.currency = currency
     }
 }
+
+extension Transaction: Equatable {
+    public static func == (lhs: Transaction, rhs: Transaction) -> Bool {
+        lhs.sku == rhs.sku &&
+            lhs.amount == rhs.amount &&
+            lhs.currency == rhs.currency
+    }
+}

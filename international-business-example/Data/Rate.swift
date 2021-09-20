@@ -19,3 +19,12 @@ struct Rate: Decodable {
         self.rate = rate
     }
 }
+
+
+extension Rate: Equatable {
+    public static func == (lhs: Rate, rhs: Rate) -> Bool {
+        lhs.from == rhs.from &&
+            lhs.to == rhs.to &&
+            lhs.rate == rhs.rate
+    }
+}
