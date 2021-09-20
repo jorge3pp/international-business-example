@@ -14,4 +14,5 @@ public protocol HTTPHeaderProtocol {
 
 public enum RequestHeaderType: String {
     case Accept
+    case Authorization
 }
