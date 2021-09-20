@@ -22,6 +22,8 @@
 		1C23685526F873EF0093C887 /* TransactionsMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23685426F873EF0093C887 /* TransactionsMockService.swift */; };
 		1C23685726F875990093C887 /* GetTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23685626F875990093C887 /* GetTransactionsUseCase.swift */; };
 		1C23685926F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23685826F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift */; };
+		1C23685B26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23685A26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift */; };
+		1C23685D26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23685C26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift */; };
 		1C553B6D26F3475200C72B3F /* international_business_exampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */; };
 		1C553B6F26F3475200C72B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B6E26F3475200C72B3F /* ContentView.swift */; };
 		1C553B7126F3475600C72B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C553B7026F3475600C72B3F /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		1C23685426F873EF0093C887 /* TransactionsMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsMockService.swift; sourceTree = "<group>"; };
 		1C23685626F875990093C887 /* GetTransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionsUseCase.swift; sourceTree = "<group>"; };
 		1C23685826F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionsUseCaseIntegrationTest.swift; sourceTree = "<group>"; };
+		1C23685A26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionsUseCaseUnitTest.swift; sourceTree = "<group>"; };
+		1C23685C26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRatesUseCaseUnitTests.swift; sourceTree = "<group>"; };
 		1C553B6926F3475200C72B3F /* international-business-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "international-business-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = international_business_exampleApp.swift; sourceTree = "<group>"; };
 		1C553B6E26F3475200C72B3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		1C23683D26F54E710093C887 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				1C23685A26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift */,
+				1C23685C26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -454,6 +460,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C23684026F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift in Sources */,
+				1C23685D26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift in Sources */,
+				1C23685B26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift in Sources */,
 				1C23685926F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift in Sources */,
 				1C23684A26F8690A0093C887 /* AwaitPublisher.swift in Sources */,
 			);
