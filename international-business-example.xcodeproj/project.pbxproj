@@ -10,6 +10,7 @@
 		1C23683526F54A330093C887 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C23683426F54A330093C887 /* ApiManager */; };
 		1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683826F54C240093C887 /* GetRatesRequest.swift */; };
 		1C23683C26F54C720093C887 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683B26F54C720093C887 /* Rate.swift */; };
+		1C23684026F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */; };
 		1C23684226F54EC50093C887 /* RatesRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23684126F54EC50093C887 /* RatesRemoteService.swift */; };
 		1C23684526F54F6F0093C887 /* MockConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23684426F54F6F0093C887 /* MockConstants.swift */; };
 		1C23684726F550400093C887 /* GetRatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23684626F550400093C887 /* GetRatesUseCase.swift */; };
@@ -18,7 +19,6 @@
 		1C553B6F26F3475200C72B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B6E26F3475200C72B3F /* ContentView.swift */; };
 		1C553B7126F3475600C72B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C553B7026F3475600C72B3F /* Assets.xcassets */; };
 		1C553B7426F3475600C72B3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C553B7326F3475600C72B3F /* Preview Assets.xcassets */; };
-		1C553B7F26F3475600C72B3F /* international_business_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B7E26F3475600C72B3F /* international_business_exampleTests.swift */; };
 		1C553B8A26F3475600C72B3F /* international_business_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B8926F3475600C72B3F /* international_business_exampleUITests.swift */; };
 		1C553B9A26F34FA600C72B3F /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B9926F34FA600C72B3F /* UseCaseProvider.swift */; };
 		1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B9B26F34FB000C72B3F /* ServiceProvider.swift */; };
@@ -49,6 +49,7 @@
 		1C23682926F3A8B00093C887 /* ApiManager */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ApiManager; path = "international-business-example/ApiManager"; sourceTree = "<group>"; };
 		1C23683826F54C240093C887 /* GetRatesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRatesRequest.swift; sourceTree = "<group>"; };
 		1C23683B26F54C720093C887 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRatesUseCaseIntegrationTests.swift; sourceTree = "<group>"; };
 		1C23684126F54EC50093C887 /* RatesRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRemoteService.swift; sourceTree = "<group>"; };
 		1C23684426F54F6F0093C887 /* MockConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConstants.swift; sourceTree = "<group>"; };
 		1C23684626F550400093C887 /* GetRatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRatesUseCase.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		1C553B7326F3475600C72B3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C553B7526F3475600C72B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C553B7A26F3475600C72B3F /* international-business-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "international-business-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C553B7E26F3475600C72B3F /* international_business_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = international_business_exampleTests.swift; sourceTree = "<group>"; };
 		1C553B8026F3475600C72B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C553B8526F3475600C72B3F /* international-business-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "international-business-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C553B8926F3475600C72B3F /* international_business_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = international_business_exampleUITests.swift; sourceTree = "<group>"; };
@@ -123,12 +123,35 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		1C23683D26F54E710093C887 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		1C23683E26F54E770093C887 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
 		1C23684326F54F650093C887 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				1C23684426F54F6F0093C887 /* MockConstants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C23684826F868FE0093C887 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C23684926F8690A0093C887 /* AwaitPublisher.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1C553B6026F3475200C72B3F = {
@@ -181,7 +204,9 @@
 		1C553B7D26F3475600C72B3F /* international-business-exampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				1C553B7E26F3475600C72B3F /* international_business_exampleTests.swift */,
+				1C23684826F868FE0093C887 /* Helpers */,
+				1C23683E26F54E770093C887 /* Integration */,
+				1C23683D26F54E710093C887 /* Unit */,
 				1C553B8026F3475600C72B3F /* Info.plist */,
 			);
 			path = "international-business-exampleTests";
@@ -393,7 +418,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C553B7F26F3475600C72B3F /* international_business_exampleTests.swift in Sources */,
+				1C23684026F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift in Sources */,
+				1C23684A26F8690A0093C887 /* AwaitPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
