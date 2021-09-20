@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C23683526F54A330093C887 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C23683426F54A330093C887 /* ApiManager */; };
+		1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683826F54C240093C887 /* GetRatesRequest.swift */; };
 		1C23683C26F54C720093C887 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683B26F54C720093C887 /* Rate.swift */; };
 		1C553B6D26F3475200C72B3F /* international_business_exampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */; };
 		1C553B6F26F3475200C72B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553B6E26F3475200C72B3F /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1C23682926F3A8B00093C887 /* ApiManager */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ApiManager; path = "international-business-example/ApiManager"; sourceTree = "<group>"; };
+		1C23683826F54C240093C887 /* GetRatesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRatesRequest.swift; sourceTree = "<group>"; };
 		1C23683B26F54C720093C887 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		1C553B6926F3475200C72B3F /* international-business-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "international-business-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = international_business_exampleApp.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C23683726F54C240093C887 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1C23683826F54C240093C887 /* GetRatesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		1C23683A26F54C520093C887 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 			children = (
 				1C23683A26F54C520093C887 /* Data */,
 				1C553B9826F34F9500C72B3F /* Providers */,
+				1C23683726F54C240093C887 /* Requests */,
 				1C553B9F26F34FC400C72B3F /* Services */,
 				1C553B9726F34F8400C72B3F /* UseCases */,
 				1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */,
@@ -344,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */,
+				1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */,
 				1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */,
 				1C23683C26F54C720093C887 /* Rate.swift in Sources */,
 				1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */,

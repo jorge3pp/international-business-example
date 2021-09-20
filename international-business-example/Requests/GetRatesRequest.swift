@@ -6,5 +6,23 @@
 //
 
 import Foundation
+import ApiManager
 
-struct GetRatesRequest
+struct GetRatesRequest: APIRequestProtocol {
+    typealias Response = [Rate]
+    
+    var method: HTTPMethodProtocol
+    var baseURL: URL {
+        URL(string: "http://quiet-stone-2094.herokuapp.com/rates")!
+    }
+    
+    init(with headerProtocol: HTTPHeaderProtocol) {
+        method = GetMethod(
+            requestHeaders: headerProtocol
+        )
+    }
+
+    func convertPropertiesToBody() -> [String: Any] {
+        [:]
+    }
+}
