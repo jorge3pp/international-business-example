@@ -21,7 +21,7 @@ class GetTransactionsUseCaseIntegrationTest: XCTestCase {
         getTransactionsUseCase = useCaseProvider.getTransactionsUseCase
     }
 
-    func test_getRatesUseCase() throws {
+    func test_getTransactionsUseCase() throws {
         // Given
         let publisher = getTransactionsUseCase.execute()
 

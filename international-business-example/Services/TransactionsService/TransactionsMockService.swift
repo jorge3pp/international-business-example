@@ -10,7 +10,7 @@ import Combine
 
 class TransactionsMockService: TransactionsServiceProtocol {
     func getTransactions(with headerProtocol: HTTPHeaderProtocol) -> AnyPublisher<[Transaction], Error> {
-        Just([MockConstants.transaction])
+        Just(MockConstants.transactions)
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }

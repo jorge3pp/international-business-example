@@ -29,6 +29,6 @@ class GetTransactionsUseCaseUnitTest: XCTestCase {
         let expectedResult = try awaitPublisher(publisher)
 
         // Then
-        XCTAssertEqual(expectedResult, [MockConstants.transaction])
+        XCTAssertEqual(expectedResult, MockConstants.transactions)
     }
 }
