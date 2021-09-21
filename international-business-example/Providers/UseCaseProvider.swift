@@ -8,9 +8,9 @@
 import Foundation
 import ApiManager
 
-struct UseCaseProvider {
-    let getRatesUseCase: GetRatesUseCase
-    let getTransactionsUseCase: GetTransactionsUseCase
+class UseCaseProvider: ObservableObject {
+    @Published var getRatesUseCase: GetRatesUseCase
+    @Published var getTransactionsUseCase: GetTransactionsUseCase
 
     init(serviceProvider: ServiceProviderProtocol) {
         getRatesUseCase = GetRatesUseCase(

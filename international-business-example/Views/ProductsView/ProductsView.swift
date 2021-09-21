@@ -16,7 +16,6 @@ struct ProductsView: View {
                 ProductRow(product: item)
             }.onAppear(perform: {
                 viewModel.fetchTransactions()
-                viewModel.fetchRates()
             }).navigationTitle("Listado de productos")
         }
     }
@@ -25,9 +24,10 @@ struct ProductsView: View {
 // A view that shows the data for one Restaurant.
 struct ProductRow: View {
     var product: Product
+    @EnvironmentObject var useCaseProvider: UseCaseProvider
 
     var body: some View {
-        NavigationLink(destination: ProductDetailsView(product: product)) {
+        NavigationLink(destination: ProductDetailsView(viewModel: ProductsDetailsViewModel(product: product, useCaseProvider: useCaseProvider))) {
             Text("\(product.id)")
         }
     }

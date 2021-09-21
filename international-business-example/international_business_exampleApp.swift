@@ -13,7 +13,7 @@ struct international_business_exampleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ProductsView(viewModel: ProductsViewModel(useCaseProvider: useCaseProvider))
+            ProductsView(viewModel: ProductsViewModel(useCaseProvider: useCaseProvider)).environmentObject(useCaseProvider)
         }
     }
 }

@@ -8,27 +8,20 @@
 import SwiftUI
 
 struct ProductDetailsView: View {
-    let product: Product
-    
-    init(product: Product) {
-        self.product = product
-    }
+    @ObservedObject var viewModel: ProductsDetailsViewModel
     
     var body: some View {
-        List(product.transactions) { item in
-            TransactionRow(transaction: item)
+        Text("Total amount \(viewModel.getTotalAmount(currency: "EUR").description) EUR").bold()
+        
+        List(viewModel.product.transactions) { transaction in
+            VStack(alignment: .leading) {
+                Text("\(viewModel.exchange(from: transaction.currency, to: "EUR", with: transaction.amount).description) EUR")
+                Text("\(viewModel.exchange(from: transaction.currency, to: "USD", with: transaction.amount).description) USD")
+                Text("\(viewModel.exchange(from: transaction.currency, to: "AUD", with: transaction.amount).description) AUD")
+                Text("\(viewModel.exchange(from: transaction.currency, to: "CAD", with: transaction.amount).description) CAD")
+            }
+        }.onAppear {
+            viewModel.fetchRates()
         }.navigationTitle("Transferencias")
-    }
-}
-
-
-struct TransactionRow: View {
-    var transaction: Transaction
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(transaction.amount) \(transaction.currency)")
-            Text("\(transaction.sku)")
-        }
     }
 }

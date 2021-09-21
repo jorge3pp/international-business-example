@@ -39,7 +39,7 @@ final class GetRatesUseCase {
             currency.exchangeRates.keys.forEach { currencyKnownRates in
                 uniqueCurrencyIdentifiers.forEach{ identifier in
                     if(!currencyKnownRates.contains(identifier) && currency.id != identifier){
-                        currency.appendExchangeRate(id: identifier, rate: completeCurrencyRates(currencies: currencies, from: currency, to: currencies.filter{ $0.id == identifier}[0]))
+                        currency.appendExchangeRate(id: identifier, rate: completeCurrencyRates(alreadyChecked: [] ,currencies: currencies, from: currency, to: currencies.filter{ $0.id == identifier}[0]))
                     }
                 }
             }
@@ -48,7 +48,7 @@ final class GetRatesUseCase {
         return currencies
     }
     
-    private func completeCurrencyRates(currencies: [Currency], from: Currency, to: Currency, inversion: Bool = false) -> Decimal {
+    private func completeCurrencyRates(alreadyChecked: [Currency], currencies: [Currency], from: Currency, to: Currency, inversion: Bool = false) -> Decimal {
         if (currencies.isEmpty){
             return NSNumber(floatLiteral: 1.0).decimalValue
         }
@@ -56,14 +56,27 @@ final class GetRatesUseCase {
         if fromCurrencyKeys.contains(to.id){
             return inversion ? (1/from.exchangeRates[to.id]!): from.exchangeRates[to.id]!
         } else {
-            let newCurrencyList = currencies.filter{ $0.id != from.id && fromCurrencyKeys.count == 1 }
-            if let coincidence: String = newCurrencyList.map{$0.id}.filter{ currencyNotTriedYet in
-                fromCurrencyKeys.contains(currencyNotTriedYet)
-            }[safe: 0] {
+            var alreadyCheckedCurrency = alreadyChecked
+            if(alreadyCheckedCurrency.filter{$0.id == from.id}.count == 0){
+                alreadyCheckedCurrency.append(from)
+            }
+            var coincidences: [String] = []
+            
+            fromCurrencyKeys.forEach{
+                if(alreadyCheckedCurrency.map{$0.id}.contains($0)){} else {
+                    coincidences.append($0)
+                }
+            }
+            
+            if coincidences.count != 0 {
+                let coincidence = coincidences[Int.random(in: 0...coincidences.count-1)]
                 let newFrom = currencies.filter{ $0.id == coincidence }[0]
-                return completeCurrencyRates(currencies: newCurrencyList, from: newFrom, to: to) * from.exchangeRates[coincidence]!
+                return completeCurrencyRates(alreadyChecked: alreadyCheckedCurrency, currencies: currencies, from: newFrom, to: to, inversion: inversion) * from.exchangeRates[coincidence]!
             } else {
-                return completeCurrencyRates(currencies: currencies, from: to, to: from, inversion: true)
+                if(alreadyCheckedCurrency.count == currencies.count){
+                    alreadyCheckedCurrency = []
+                }
+                return completeCurrencyRates(alreadyChecked: alreadyCheckedCurrency, currencies: currencies, from: to, to: from, inversion: true)
             }
         }
     }

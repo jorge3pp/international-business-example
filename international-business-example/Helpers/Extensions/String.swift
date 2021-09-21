@@ -16,6 +16,6 @@ extension String {
         guard let number = formatter.number(from: self) else {
             return 0.0 /// Manage error in format
         }
-        return number.decimalValue
+        return number.decimalValue.rounded()
     }
 }
