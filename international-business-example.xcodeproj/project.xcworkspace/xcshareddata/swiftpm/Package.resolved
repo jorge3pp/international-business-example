@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ApiManager",
+        "repositoryURL": "https://github.com/jorge3pp/ApiManager.git",
+        "state": {
+          "branch": "master",
+          "revision": "49f0ceac24fef97c6ccdb84746477a04928273ae",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

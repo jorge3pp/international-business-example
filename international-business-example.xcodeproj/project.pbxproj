@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C23683526F54A330093C887 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C23683426F54A330093C887 /* ApiManager */; };
 		1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683826F54C240093C887 /* GetRatesRequest.swift */; };
 		1C23683C26F54C720093C887 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683B26F54C720093C887 /* Rate.swift */; };
 		1C23684026F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */; };
@@ -35,6 +34,7 @@
 		1C553BA126F3507C00C72B3F /* ServiceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA026F3507C00C72B3F /* ServiceProviderProtocol.swift */; };
 		1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA326F37CBE00C72B3F /* RatesMockService.swift */; };
 		1C553BA726F37D4400C72B3F /* RatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */; };
+		1C96235826F8F93F00F66041 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C96235726F8F93F00F66041 /* ApiManager */; };
 		1CDF9DC026F88896003B00D2 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C23682926F3A8B00093C887 /* ApiManager */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ApiManager; path = "international-business-example/ApiManager"; sourceTree = "<group>"; };
 		1C23683826F54C240093C887 /* GetRatesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRatesRequest.swift; sourceTree = "<group>"; };
 		1C23683B26F54C720093C887 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRatesUseCaseIntegrationTests.swift; sourceTree = "<group>"; };
@@ -98,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C23683526F54A330093C887 /* ApiManager in Frameworks */,
+				1C96235826F8F93F00F66041 /* ApiManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +121,6 @@
 		1C23683326F54A330093C887 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C23682926F3A8B00093C887 /* ApiManager */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,7 +319,7 @@
 			);
 			name = "international-business-example";
 			packageProductDependencies = (
-				1C23683426F54A330093C887 /* ApiManager */,
+				1C96235726F8F93F00F66041 /* ApiManager */,
 			);
 			productName = "international-business-example";
 			productReference = 1C553B6926F3475200C72B3F /* international-business-example.app */;
@@ -394,6 +392,9 @@
 				Base,
 			);
 			mainGroup = 1C553B6026F3475200C72B3F;
+			packageReferences = (
+				1C96235626F8F93F00F66041 /* XCRemoteSwiftPackageReference "ApiManager" */,
+			);
 			productRefGroup = 1C553B6A26F3475200C72B3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -784,9 +785,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1C96235626F8F93F00F66041 /* XCRemoteSwiftPackageReference "ApiManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jorge3pp/ApiManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		1C23683426F54A330093C887 /* ApiManager */ = {
+		1C96235726F8F93F00F66041 /* ApiManager */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 1C96235626F8F93F00F66041 /* XCRemoteSwiftPackageReference "ApiManager" */;
 			productName = ApiManager;
 		};
 /* End XCSwiftPackageProductDependency section */
