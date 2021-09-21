@@ -15,7 +15,7 @@ internal class ProductsViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    public private(set) var transactions: [Transaction] = [] {
+    public private(set) var products: [Product] = [] {
         willSet {
             self.objectWillChange.send()
         }
@@ -34,7 +34,7 @@ internal class ProductsViewModel: ObservableObject {
         let _ = getTransactionsUseCase.execute()
             .sink(receiveCompletion: {_ in},
                   receiveValue: { transactions in
-                    self.transactions = transactions
+                    self.products = Product.createProductList(from: transactions)
                   }).store(in: &cancellable)
     }
     

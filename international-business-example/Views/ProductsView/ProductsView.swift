@@ -11,20 +11,19 @@ struct ProductsView: View {
     @ObservedObject var viewModel: ProductsViewModel
 
     var body: some View {
-        List(viewModel.transactions) { item in
-            TransactionRow(transaction: item)
+        List(viewModel.products) { item in
+            ProductRow(product: item)
         }.onAppear(perform: {
             viewModel.fetchTransactions()
-            viewModel.fetchRates()
         })
     }
 }
 
 // A view that shows the data for one Restaurant.
-struct TransactionRow: View {
-    var transaction: Transaction
+struct ProductRow: View {
+    var product: Product
 
     var body: some View {
-        Text("\(transaction.sku)")
+        Text("\(product.id)")
     }
 }

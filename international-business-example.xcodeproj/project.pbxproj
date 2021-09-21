@@ -34,6 +34,7 @@
 		1C553BA126F3507C00C72B3F /* ServiceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA026F3507C00C72B3F /* ServiceProviderProtocol.swift */; };
 		1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA326F37CBE00C72B3F /* RatesMockService.swift */; };
 		1C553BA726F37D4400C72B3F /* RatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */; };
+		1C7BF09026F9DA93002EBD5E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF08F26F9DA93002EBD5E /* Product.swift */; };
 		1C96235826F8F93F00F66041 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C96235726F8F93F00F66041 /* ApiManager */; };
 		1CDF9DC026F88896003B00D2 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		1C553BA026F3507C00C72B3F /* ServiceProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderProtocol.swift; sourceTree = "<group>"; };
 		1C553BA326F37CBE00C72B3F /* RatesMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesMockService.swift; sourceTree = "<group>"; };
 		1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesServiceProtocol.swift; sourceTree = "<group>"; };
+		1C7BF08F26F9DA93002EBD5E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			children = (
 				1C23683B26F54C720093C887 /* Rate.swift */,
 				1C23684D26F8732B0093C887 /* Transaction.swift */,
+				1C7BF08F26F9DA93002EBD5E /* Product.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */,
 				1C23685726F875990093C887 /* GetTransactionsUseCase.swift in Sources */,
 				1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */,
+				1C7BF09026F9DA93002EBD5E /* Product.swift in Sources */,
 				1C23684726F550400093C887 /* GetRatesUseCase.swift in Sources */,
 				1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */,
 				1C23683C26F54C720093C887 /* Rate.swift in Sources */,
