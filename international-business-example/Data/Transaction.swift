@@ -21,8 +21,12 @@ struct Transaction: Decodable {
 
 extension Transaction: Equatable {
     public static func == (lhs: Transaction, rhs: Transaction) -> Bool {
-        lhs.sku == rhs.sku &&
-            lhs.amount == rhs.amount &&
-            lhs.currency == rhs.currency
+        lhs.sku == rhs.sku && lhs.amount == rhs.amount && lhs.currency == rhs.currency
+    }
+}
+
+extension Transaction: Identifiable {
+    var id: String {
+        UUID().uuidString
     }
 }

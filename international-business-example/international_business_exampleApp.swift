@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct international_business_exampleApp: App {
+struct international_business_exampleApp: App {    
+    let useCaseProvider = UseCaseProvider(serviceProvider: ServiceProvider())
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductsView(viewModel: ProductsViewModel(useCaseProvider: useCaseProvider))
         }
     }
 }
