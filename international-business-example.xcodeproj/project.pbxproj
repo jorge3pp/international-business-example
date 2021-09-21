@@ -217,9 +217,8 @@
 				1C23684326F54F650093C887 /* Resources */,
 				1C553B9F26F34FC400C72B3F /* Services */,
 				1C553B9726F34F8400C72B3F /* UseCases */,
+				1C7BF08D26F9D981002EBD5E /* Views */,
 				1C553B6C26F3475200C72B3F /* international_business_exampleApp.swift */,
-				1C553B6E26F3475200C72B3F /* ProductsView.swift */,
-				1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */,
 				1C553B7026F3475600C72B3F /* Assets.xcassets */,
 				1C553B7526F3475600C72B3F /* Info.plist */,
 				1C553B7226F3475600C72B3F /* Preview Content */,
@@ -300,6 +299,23 @@
 				1C23684126F54EC50093C887 /* RatesRemoteService.swift */,
 			);
 			path = RatesService;
+			sourceTree = "<group>";
+		};
+		1C7BF08D26F9D981002EBD5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BF08E26F9D998002EBD5E /* ProductsView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C7BF08E26F9D998002EBD5E /* ProductsView */ = {
+			isa = PBXGroup;
+			children = (
+				1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */,
+				1C553B6E26F3475200C72B3F /* ProductsView.swift */,
+			);
+			path = ProductsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
