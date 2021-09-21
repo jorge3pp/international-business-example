@@ -22,6 +22,6 @@ struct ProductDetailsView: View {
             }
         }.onAppear {
             viewModel.fetchRates()
-        }.navigationTitle("Transferencias")
+        }.navigationTitle("Transaction")
     }
 }
