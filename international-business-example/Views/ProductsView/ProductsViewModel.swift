@@ -20,7 +20,7 @@ internal class ProductsViewModel: ObservableObject {
             self.objectWillChange.send()
         }
     }
-    public private(set) var rates: [Rate] = [] {
+    public private(set) var currencies: [Currency] = [] {
         willSet {
             self.objectWillChange.send()
         }
@@ -41,8 +41,8 @@ internal class ProductsViewModel: ObservableObject {
     func fetchRates() {
         let _ = getRatesUseCase.execute()
             .sink(receiveCompletion: {_ in},
-                  receiveValue: {rates in
-                    self.rates = rates
+                  receiveValue: { currencies in
+                    self.currencies = currencies
                   }).store(in: &cancellable)
     }
 }

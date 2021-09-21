@@ -36,6 +36,9 @@
 		1C553BA726F37D4400C72B3F /* RatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */; };
 		1C7BF09026F9DA93002EBD5E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF08F26F9DA93002EBD5E /* Product.swift */; };
 		1C7BF09326F9E133002EBD5E /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09226F9E133002EBD5E /* ProductDetailsView.swift */; };
+		1C7BF09526F9F915002EBD5E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09426F9F915002EBD5E /* Currency.swift */; };
+		1C7BF09926FA0224002EBD5E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09826FA0224002EBD5E /* String.swift */; };
+		1C7BF09B26FA150A002EBD5E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09A26FA150A002EBD5E /* Collection.swift */; };
 		1C96235826F8F93F00F66041 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C96235726F8F93F00F66041 /* ApiManager */; };
 		1CDF9DC026F88896003B00D2 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +96,9 @@
 		1C553BA626F37D4400C72B3F /* RatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesServiceProtocol.swift; sourceTree = "<group>"; };
 		1C7BF08F26F9DA93002EBD5E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1C7BF09226F9E133002EBD5E /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		1C7BF09426F9F915002EBD5E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		1C7BF09826FA0224002EBD5E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1C7BF09A26FA150A002EBD5E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,7 @@
 				1C23683B26F54C720093C887 /* Rate.swift */,
 				1C23684D26F8732B0093C887 /* Transaction.swift */,
 				1C7BF08F26F9DA93002EBD5E /* Product.swift */,
+				1C7BF09426F9F915002EBD5E /* Currency.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 		1C553B6B26F3475200C72B3F /* international-business-example */ = {
 			isa = PBXGroup;
 			children = (
+				1C7BF09626FA0215002EBD5E /* Helpers */,
 				1C23683A26F54C520093C887 /* Data */,
 				1C553B9826F34F9500C72B3F /* Providers */,
 				1C23683726F54C240093C887 /* Requests */,
@@ -330,6 +338,23 @@
 				1C7BF09226F9E133002EBD5E /* ProductDetailsView.swift */,
 			);
 			path = ProductDetailsView;
+			sourceTree = "<group>";
+		};
+		1C7BF09626FA0215002EBD5E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BF09726FA021C002EBD5E /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1C7BF09726FA021C002EBD5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BF09826FA0224002EBD5E /* String.swift */,
+				1C7BF09A26FA150A002EBD5E /* Collection.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,9 +494,12 @@
 			files = (
 				1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */,
 				1C23685726F875990093C887 /* GetTransactionsUseCase.swift in Sources */,
+				1C7BF09526F9F915002EBD5E /* Currency.swift in Sources */,
 				1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */,
 				1C7BF09026F9DA93002EBD5E /* Product.swift in Sources */,
 				1C23684726F550400093C887 /* GetRatesUseCase.swift in Sources */,
+				1C7BF09B26FA150A002EBD5E /* Collection.swift in Sources */,
+				1C7BF09926FA0224002EBD5E /* String.swift in Sources */,
 				1C553B9C26F34FB000C72B3F /* ServiceProvider.swift in Sources */,
 				1C23683C26F54C720093C887 /* Rate.swift in Sources */,
 				1C23684226F54EC50093C887 /* RatesRemoteService.swift in Sources */,

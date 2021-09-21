@@ -18,9 +18,9 @@ struct Product: Identifiable {
         self.transactions = transactions
     }
     
-    func getTotalAmount() -> Double {
+    func getTotalAmount() -> Decimal {
         /// TODO
-        return Double.zero
+        return Decimal.zero
     }
     
     static func createProductList(from transactions: [Transaction]) -> [Product] {

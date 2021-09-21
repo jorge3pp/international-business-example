@@ -16,6 +16,7 @@ struct ProductsView: View {
                 ProductRow(product: item)
             }.onAppear(perform: {
                 viewModel.fetchTransactions()
+                viewModel.fetchRates()
             }).navigationTitle("Listado de productos")
         }
     }
