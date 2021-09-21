@@ -24,3 +24,9 @@ extension Transaction: Equatable {
         lhs.sku == rhs.sku && lhs.amount == rhs.amount && lhs.currency == rhs.currency
     }
 }
+
+extension Transaction: Identifiable {
+    var id: UUID {
+        UUID()
+    }
+}

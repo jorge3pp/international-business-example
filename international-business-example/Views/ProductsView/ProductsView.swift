@@ -11,11 +11,13 @@ struct ProductsView: View {
     @ObservedObject var viewModel: ProductsViewModel
 
     var body: some View {
-        List(viewModel.products) { item in
-            ProductRow(product: item)
-        }.onAppear(perform: {
-            viewModel.fetchTransactions()
-        })
+        NavigationView {
+            List(viewModel.products) { item in
+                ProductRow(product: item)
+            }.onAppear(perform: {
+                viewModel.fetchTransactions()
+            }).navigationTitle("Listado de productos")
+        }
     }
 }
 
@@ -24,6 +26,8 @@ struct ProductRow: View {
     var product: Product
 
     var body: some View {
-        Text("\(product.id)")
+        NavigationLink(destination: ProductDetailsView(product: product)) {
+            Text("\(product.id)")
+        }
     }
 }
