@@ -11,4 +11,5 @@ import Foundation
 protocol ServiceProviderProtocol {
     var ratesService: RatesServiceProtocol { get }
     var transactionsService: TransactionsServiceProtocol { get }
+    var calculateRatesService: CalculateRatesServiceProtocol { get }
 }

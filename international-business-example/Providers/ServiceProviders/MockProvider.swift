@@ -11,9 +11,12 @@ import Foundation
 struct MockProvider: ServiceProviderProtocol {
     let ratesService: RatesServiceProtocol
     let transactionsService: TransactionsServiceProtocol
+    let calculateRatesService: CalculateRatesServiceProtocol
     
     init() {
         ratesService = RatesMockService()
         transactionsService = TransactionsMockService()
+        /// TODO: Mock
+        calculateRatesService = CalculateRatesDFSService()
     }
 }

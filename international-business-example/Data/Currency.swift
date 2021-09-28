@@ -11,6 +11,12 @@ class Currency {
     public var id: String
     public var exchangeRates: [String: Decimal]
 
+    
+    public init(id: String, exchangeRates: [String: Decimal]) {
+        self.id = id
+        self.exchangeRates = exchangeRates
+    }
+    
     public init(id: String, rates: [Rate]) {
         self.id = id
         self.exchangeRates = Currency.getRatesBased(in: id, from: rates)

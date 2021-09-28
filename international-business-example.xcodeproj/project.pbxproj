@@ -41,7 +41,15 @@
 		1C7BF09B26FA150A002EBD5E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09A26FA150A002EBD5E /* Collection.swift */; };
 		1C7BF09D26FA451D002EBD5E /* ProductsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09C26FA451D002EBD5E /* ProductsDetailsViewModel.swift */; };
 		1C7BF09F26FA4D2E002EBD5E /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF09E26FA4D2E002EBD5E /* Decimal.swift */; };
+		1C7BF0A226FCA158002EBD5E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF0A126FCA158002EBD5E /* Graph.swift */; };
+		1C7BF0A526FCBC9A002EBD5E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF0A426FCBC9A002EBD5E /* Stack.swift */; };
+		1C7BF0A726FCCF71002EBD5E /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF0A626FCCF71002EBD5E /* Vertex.swift */; };
+		1C7BF0A926FCCF90002EBD5E /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BF0A826FCCF90002EBD5E /* Edge.swift */; };
 		1C96235826F8F93F00F66041 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C96235726F8F93F00F66041 /* ApiManager */; };
+		1CB39504270333FA00C2D880 /* CalculateRatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB39503270333FA00C2D880 /* CalculateRatesServiceProtocol.swift */; };
+		1CB395062703341E00C2D880 /* CalculateRatesDFSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB395052703341E00C2D880 /* CalculateRatesDFSService.swift */; };
+		1CB395082703381000C2D880 /* CalculateRatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB395072703381000C2D880 /* CalculateRatesUseCase.swift */; };
+		1CB3950A27033F6100C2D880 /* CalculateRatesUseCaseIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB3950927033F6100C2D880 /* CalculateRatesUseCaseIntegrationTests.swift */; };
 		1CDF9DC026F88896003B00D2 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +111,14 @@
 		1C7BF09A26FA150A002EBD5E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1C7BF09C26FA451D002EBD5E /* ProductsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsViewModel.swift; sourceTree = "<group>"; };
 		1C7BF09E26FA4D2E002EBD5E /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
+		1C7BF0A126FCA158002EBD5E /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		1C7BF0A426FCBC9A002EBD5E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		1C7BF0A626FCCF71002EBD5E /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		1C7BF0A826FCCF90002EBD5E /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		1CB39503270333FA00C2D880 /* CalculateRatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateRatesServiceProtocol.swift; sourceTree = "<group>"; };
+		1CB395052703341E00C2D880 /* CalculateRatesDFSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateRatesDFSService.swift; sourceTree = "<group>"; };
+		1CB395072703381000C2D880 /* CalculateRatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateRatesUseCase.swift; sourceTree = "<group>"; };
+		1CB3950927033F6100C2D880 /* CalculateRatesUseCaseIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateRatesUseCaseIntegrationTests.swift; sourceTree = "<group>"; };
 		1CDF9DBF26F88896003B00D2 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +189,7 @@
 			children = (
 				1C23683F26F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift */,
 				1C23685826F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift */,
+				1CB3950927033F6100C2D880 /* CalculateRatesUseCaseIntegrationTests.swift */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -276,6 +293,7 @@
 			children = (
 				1C23684626F550400093C887 /* GetRatesUseCase.swift */,
 				1C23685626F875990093C887 /* GetTransactionsUseCase.swift */,
+				1CB395072703381000C2D880 /* CalculateRatesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -293,6 +311,7 @@
 		1C553B9F26F34FC400C72B3F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1CB39502270333DD00C2D880 /* CalculateRatesService */,
 				1C23684F26F873AC0093C887 /* TransactionsService */,
 				1C553BA526F37D3000C72B3F /* RatesService */,
 			);
@@ -348,6 +367,7 @@
 		1C7BF09626FA0215002EBD5E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1C7BF0A026FCA150002EBD5E /* Utils */,
 				1C7BF09726FA021C002EBD5E /* Extensions */,
 			);
 			path = Helpers;
@@ -361,6 +381,34 @@
 				1C7BF09E26FA4D2E002EBD5E /* Decimal.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1C7BF0A026FCA150002EBD5E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BF0A326FCBC8C002EBD5E /* GraphAlgorithm */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1C7BF0A326FCBC8C002EBD5E /* GraphAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BF0A126FCA158002EBD5E /* Graph.swift */,
+				1C7BF0A426FCBC9A002EBD5E /* Stack.swift */,
+				1C7BF0A626FCCF71002EBD5E /* Vertex.swift */,
+				1C7BF0A826FCCF90002EBD5E /* Edge.swift */,
+			);
+			path = GraphAlgorithm;
+			sourceTree = "<group>";
+		};
+		1CB39502270333DD00C2D880 /* CalculateRatesService */ = {
+			isa = PBXGroup;
+			children = (
+				1CB39503270333FA00C2D880 /* CalculateRatesServiceProtocol.swift */,
+				1CB395052703341E00C2D880 /* CalculateRatesDFSService.swift */,
+			);
+			path = CalculateRatesService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +548,7 @@
 			files = (
 				1C553B9E26F34FB800C72B3F /* MockProvider.swift in Sources */,
 				1C23685726F875990093C887 /* GetTransactionsUseCase.swift in Sources */,
+				1CB395082703381000C2D880 /* CalculateRatesUseCase.swift in Sources */,
 				1C7BF09526F9F915002EBD5E /* Currency.swift in Sources */,
 				1C23683926F54C240093C887 /* GetRatesRequest.swift in Sources */,
 				1C7BF09026F9DA93002EBD5E /* Product.swift in Sources */,
@@ -511,15 +560,21 @@
 				1C23683C26F54C720093C887 /* Rate.swift in Sources */,
 				1C23684226F54EC50093C887 /* RatesRemoteService.swift in Sources */,
 				1C23685526F873EF0093C887 /* TransactionsMockService.swift in Sources */,
+				1CB395062703341E00C2D880 /* CalculateRatesDFSService.swift in Sources */,
 				1C553BA426F37CBE00C72B3F /* RatesMockService.swift in Sources */,
 				1C553B6F26F3475200C72B3F /* ProductsView.swift in Sources */,
 				1C23685126F873BC0093C887 /* TransactionsServiceProtocol.swift in Sources */,
+				1C7BF0A226FCA158002EBD5E /* Graph.swift in Sources */,
 				1C23685326F873E20093C887 /* TransactionsRemoteService.swift in Sources */,
 				1C553B9A26F34FA600C72B3F /* UseCaseProvider.swift in Sources */,
 				1C7BF09F26FA4D2E002EBD5E /* Decimal.swift in Sources */,
+				1CB39504270333FA00C2D880 /* CalculateRatesServiceProtocol.swift in Sources */,
 				1C23684C26F872F40093C887 /* GetTransactionsRequest.swift in Sources */,
 				1CDF9DC026F88896003B00D2 /* ProductsViewModel.swift in Sources */,
+				1C7BF0A526FCBC9A002EBD5E /* Stack.swift in Sources */,
+				1C7BF0A726FCCF71002EBD5E /* Vertex.swift in Sources */,
 				1C553BA126F3507C00C72B3F /* ServiceProviderProtocol.swift in Sources */,
+				1C7BF0A926FCCF90002EBD5E /* Edge.swift in Sources */,
 				1C7BF09326F9E133002EBD5E /* ProductDetailsView.swift in Sources */,
 				1C23684526F54F6F0093C887 /* MockConstants.swift in Sources */,
 				1C553B6D26F3475200C72B3F /* international_business_exampleApp.swift in Sources */,
@@ -535,6 +590,7 @@
 				1C23684026F54E980093C887 /* GetRatesUseCaseIntegrationTests.swift in Sources */,
 				1C23685D26F8775D0093C887 /* GetRatesUseCaseUnitTests.swift in Sources */,
 				1C23685B26F876E40093C887 /* GetTransactionsUseCaseUnitTest.swift in Sources */,
+				1CB3950A27033F6100C2D880 /* CalculateRatesUseCaseIntegrationTests.swift in Sources */,
 				1C23685926F876520093C887 /* GetTransactionsUseCaseIntegrationTest.swift in Sources */,
 				1C23684A26F8690A0093C887 /* AwaitPublisher.swift in Sources */,
 			);
@@ -688,7 +744,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"international-business-example/Preview Content\"";
-				DEVELOPMENT_TEAM = 22F92335QF;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "international-business-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -712,7 +768,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"international-business-example/Preview Content\"";
-				DEVELOPMENT_TEAM = 22F92335QF;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "international-business-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
