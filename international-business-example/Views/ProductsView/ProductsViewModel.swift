@@ -11,7 +11,7 @@ import ApiManager
 
 internal class ProductsViewModel: ObservableObject {
     private let getTransactionsUseCase : GetTransactionsUseCase
-    let useCaseProvider : UseCaseProvider
+    private let useCaseProvider : UseCaseProvider
     
     private var cancellable = Set<AnyCancellable>()
     

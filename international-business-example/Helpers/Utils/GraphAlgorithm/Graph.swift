@@ -68,6 +68,18 @@ extension AdjacencyList: Graphable {
         return result
     }
     
+    var currencies: [Currency] {
+        var result: [Currency] = []
+        for (vertex, edges) in adjacencyDict {
+            var exchangeRates: [String: Decimal] = [:]
+            for (_, edge) in edges.enumerated() {
+                exchangeRates[edge.destination.description] = edge.weight?.rounded()
+            }
+            result.append(Currency(id: vertex.description, exchangeRates: exchangeRates))
+        }
+        return result
+    }
+    
     private func depthFirstSearch(from start: Vertex<T>, to end: Vertex<T>) -> Stack<Vertex<T>> {
         var visited = Set<Vertex<T>>()
         var stack = Stack<Vertex<T>>()

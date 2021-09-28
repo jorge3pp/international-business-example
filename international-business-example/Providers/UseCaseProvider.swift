@@ -14,9 +14,9 @@ class UseCaseProvider: ObservableObject {
     @Published var calculateRatesUseCase: CalculateRatesUseCase
 
     init(serviceProvider: ServiceProviderProtocol) {
-        getRatesUseCase = GetRatesUseCase(
-            service: serviceProvider.ratesService, headerProtocol: ApplicationJSONHeader())
-        getTransactionsUseCase = GetTransactionsUseCase(service: serviceProvider.transactionsService, headerProtocol: ApplicationJSONHeader())
         calculateRatesUseCase = CalculateRatesUseCase(service: serviceProvider.calculateRatesService)
+        getTransactionsUseCase = GetTransactionsUseCase(service: serviceProvider.transactionsService, headerProtocol: ApplicationJSONHeader())
+        getRatesUseCase = GetRatesUseCase(
+            service: serviceProvider.ratesService, calculateRatesService: serviceProvider.calculateRatesService, headerProtocol: ApplicationJSONHeader())
     }
 }

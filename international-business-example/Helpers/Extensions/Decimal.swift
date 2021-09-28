@@ -8,7 +8,7 @@
 import Foundation
 
 extension Decimal {
-    static var one: Decimal {
+    static var one: Decimal {
         NSDecimalNumber(floatLiteral: 1.0).decimalValue.rounded()
     }
     

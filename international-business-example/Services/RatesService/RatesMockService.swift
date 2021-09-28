@@ -10,7 +10,7 @@ import ApiManager
 
 class RatesMockService: RatesServiceProtocol {
     func getCurrencyRates(with headerProtocol: HTTPHeaderProtocol) -> AnyPublisher<[Rate], Error> {
-        Just([MockConstants.rate])
+        Just([MockConstants.rate1])
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }

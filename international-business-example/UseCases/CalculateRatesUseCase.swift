@@ -14,7 +14,7 @@ final class CalculateRatesUseCase {
         self.service = service
     }
 
-    func execute(rates: [Rate]) -> [Currency] {
+    func execute(with rates: [Rate]) -> [Currency] {
         service.calculateRates(with: rates)
     }
 }
