@@ -36,7 +36,7 @@ internal class ProductsDetailsViewModel: ObservableObject {
         guard let currency = currencies.filter{ $0.id == from }[safe: 0] else {
             return .zero
         }
-        let rate = currency.exchangeRates[to] ?? NSDecimalNumber(floatLiteral: 1.0).decimalValue.rounded()
+        let rate = currency.exchangeRates[to] ?? Decimal.one
         return (with.toDecimalAmount() * rate).rounded()
     }
     

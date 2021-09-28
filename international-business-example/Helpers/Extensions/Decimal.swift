@@ -8,6 +8,10 @@
 import Foundation
 
 extension Decimal {
+    static var one: Decimal {
+        NSDecimalNumber(floatLiteral: 1.0).decimalValue.rounded()
+    }
+    
     mutating func round(_ scale: Int = 2, _ roundingMode: NSDecimalNumber.RoundingMode = .bankers) {
         var localCopy = self
         NSDecimalRound(&self, &localCopy, scale, roundingMode)
